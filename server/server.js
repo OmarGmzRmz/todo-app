@@ -3,10 +3,10 @@ const bodyParser = require('body-parser');
 const { ObjectID } = require('mongodb');
 
 //Require database connections and models
-/* const { mongoose } = require('./db/mongoose');
+const { mongoose } = require('./db/mongoose');
 const { Todo } = require('./models/todo');
 const { User } = require('./models/user');
- */
+
 
 const PORT = process.env.PORT || 3000;
 const app = express();
@@ -22,7 +22,7 @@ app.get('/', (request, response) => {
 });
 
 // POST /todos
-/* app.post('/todos', (request, response) => {
+app.post('/todos', (request, response) => {
     console.log('Request body', request.body);
     const todo = new Todo({
         ...(request.body)
@@ -58,10 +58,6 @@ app.get('/todos', (request, response) => {
 });
 
 
-app.listen(PORT, () => {
-    console.log(`App listening on port ${PORT}`);
-});
-
 // PATCH /todos/:id Update todo
 app.patch('/todos/:id', (request, response) => {
     const routeParams = request.params;
@@ -88,7 +84,7 @@ app.delete('/todos/:id', (request, response) => {
      });
      
 });
- */
+
 app.listen(PORT, () => {
     console.log(`App listening on port ${PORT}`);
 });
@@ -96,7 +92,7 @@ app.listen(PORT, () => {
 // Export the app
 module.exports = {
     app,
-    //Todo
+    Todo
 };
 
 
