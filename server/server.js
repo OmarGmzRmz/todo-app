@@ -14,6 +14,13 @@ const app = express();
 // Use a middleware to parse the body of the request and response
 app.use(bodyParser.json());
 
+// GET /
+app.get('/', (request, response) => {
+    return response.send({
+        message: 'Todo app v1'
+    });
+});
+
 // POST /todos
 /* app.post('/todos', (request, response) => {
     console.log('Request body', request.body);
