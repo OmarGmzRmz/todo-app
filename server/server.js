@@ -94,7 +94,7 @@ app.delete('/todos/:id', (request, response) => {
 // Export the app
 module.exports = {
     app,
-    Todo
+    //Todo
 };
 
 
