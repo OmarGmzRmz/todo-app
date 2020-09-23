@@ -3,10 +3,10 @@ const bodyParser = require('body-parser');
 const { ObjectID } = require('mongodb');
 
 //Require database connections and models
-const { mongoose } = require('./db/mongoose');
+/* const { mongoose } = require('./db/mongoose');
 const { Todo } = require('./models/todo');
 const { User } = require('./models/user');
-
+ */
 
 const PORT = process.env.PORT || 3000;
 const app = express();
@@ -15,7 +15,7 @@ const app = express();
 app.use(bodyParser.json());
 
 // POST /todos
-app.post('/todos', (request, response) => {
+/* app.post('/todos', (request, response) => {
     console.log('Request body', request.body);
     const todo = new Todo({
         ...(request.body)
@@ -81,7 +81,7 @@ app.delete('/todos/:id', (request, response) => {
      });
      
 });
-
+ */
 
 
 // Export the app
